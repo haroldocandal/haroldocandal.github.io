@@ -82,7 +82,7 @@
 
         /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(14, 44, 64, 0.75), rgba(26, 74, 90, 0.75)), url('images/dna-gif.gif') center / cover;
+            background-color: var(--col-dark-navy);
             color: white;
             padding: 80px 5%;
             text-align: center;
@@ -93,6 +93,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 50%; left: 50%;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            object-fit: cover;
+            opacity: 0.6;
         }
 
         .hero::before {
@@ -403,6 +414,9 @@
     </nav>
 
     <section class="hero">
+        <video autoplay loop muted playsinline>
+            <source src="images/principal.mp4" type="video/mp4">
+        </video>
         <div class="hero-content">
             <h1>Prof. Haroldo Candal</h1>
             <h2>Instituto de Química - UERJ</h2>
@@ -473,71 +487,7 @@
             </div>
         </div>
     </section>
-
-
-
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Disciplinas Oferecidas</h2>
-            <p class="section-subtitle">Cursos de graduação e pós-graduação com conteúdo atualizado</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon">🌡️</div>
-                        <h3 class="card-title">Termodinâmica</h3>
-                    </div>
-                    <div class="card-content">
-                        <p class="card-description">
-                            Leis fundamentais, entalpia, entropia, energia livre e suas aplicações em sistemas químicos.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon">⚡</div>
-                        <h3 class="card-title">Eletricidade</h3>
-                    </div>
-                    <div class="card-content">
-                        <p class="card-description">
-                            Eletrostática, eletrodinâmica, circuitos elétricos e fenômenos eletromagnéticos fundamentais.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon">⚛️</div>
-                        <h3 class="card-title">Química Quântica</h3>
-                    </div>
-                    <div class="card-content">
-                        <p class="card-description">
-                            Princípios da mecânica quântica, equação de Schrödinger e aplicações em sistemas químicos.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon">🧪</div>
-                        <h3 class="card-title">Química Geral</h3>
-                    </div>
-                    <div class="card-content">
-                        <p class="card-description">
-                            Estrutura atômica, ligações químicas, termodinâmica e cinética química fundamentais.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="ensino.html" class="btn btn-primary">
-                    <i class="fa-solid fa-book-open"></i> Ver Todas as Disciplinas
-                </a>
-            </div>
-        </div>
-    </section>
+    
 
     <footer>
         <p>&copy; 2025 <strong>Prof. Haroldo Candal</strong><br>
